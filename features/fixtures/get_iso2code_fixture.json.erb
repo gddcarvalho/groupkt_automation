@@ -1,0 +1,14 @@
+<% name ||= 'Afghanistan' %>
+<% alpha2code ||= 'AF' %>
+<% alpha3code ||= 'AFG' %>
+
+{
+  "RestResponse" : {
+    "messages" : [ "Country found matching code [<%= alpha2code %>]." ],
+    "result" : {
+      "name" : "<%= name %>",
+      "alpha2_code" : "<%= alpha2code %>",
+      "alpha3_code" : "<%= alpha3code %>"
+    }
+  }
+}

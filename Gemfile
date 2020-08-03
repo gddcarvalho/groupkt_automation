@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'cucumber'
+gem 'rspec-expectations'
+gem 'rake'
+gem 'rspec'
+gem 'faraday'
+gem 'byebug'
+gem 'erubis'
+gem 'webmock'

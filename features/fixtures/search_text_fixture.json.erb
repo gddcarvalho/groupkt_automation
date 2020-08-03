@@ -1,0 +1,24 @@
+<% records_found ||= 1 %>
+<% search_query ||= 'Australia' %>
+<% name ||= 'Australia' %>
+<% alpha2code ||= 'AU'  %>
+<% alpha3code ||= 'AUS' %>
+<% hash ||= {
+            'name' => "#{name}",
+            'alpha2_code' => "#{alpha2code}",
+            'alpha3_code' => "#{alpha3code}"
+          } %>
+
+<%
+message = ["Total [#{records_found}] records found."]
+records_found.to_i > 0 ? message : message = ["No matching country found for requested code [#{search_query}]."]
+
+
+%>
+
+{
+  "RestResponse" : {
+    "messages" : <%= message %>,
+    "result" : <%= hash.to_json %>
+  }
+}
